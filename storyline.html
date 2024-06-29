@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document15</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Center align vertically */
+            min-height: 100vh;
+        }
+
+        .main-container {
+            max-width: 800px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center align horizontally */
+        }
+
+        .section-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .section {
+            width: 48%; /* Adjust width as needed */
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-top: 0;
+            color: #555;
+            text-align: center;
+        }
+
+        ol {
+            margin-top: 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+
+        .clicked-link {
+            color: purple !important;
+        }
+
+        @media (max-width: 768px) {
+            .section-container {
+                flex-direction: column;
+            }
+
+            .section {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-container">
+    <div id="1" class="section">
+    <h1>Goal of the adversary:</h1>
+    <ol>
+        <li>Data leak</li>
+        <li>Ransomware</li>
+        <li>Denial Of Service</li>
+    </ol>
+    </div>
+
+    <div class="section-container">
+    <div id="2" class="section">
+
+    <h1>Attack Surface & Defenses:</h1>
+    <ol>
+        <li>Users
+            <ol type="a">
+                <li>Customers</li>
+                <li>Employees
+                    <p>Defense D1b.</p>
+                    <ol>
+                        <li class="SecurityAwareness">Regular security training on social engineering, phishing, vishing, smishing, clean desk policy, etc.</li>
+                    </ol>
+                </li>
+            </ol>
+        </li>
+        <li>Office premises, which has
+            <ol type="a">
+                <li>Wifi network
+                    <p>Defense D2a:</p>
+                    <ol>
+                        <li class="OfficeNWLateralMovement">Network firewalls</li>
+                        <li>Monitoring & alerting</li>
+                    </ol>
+                </li>
+                <li>Endpoints & workstations
+                    <div class="Bookmark1">Defense D2b:
+                    <ol>
+                        <li class="JAMF">JAMF</li>
+                        <li>Disabled USB ports</li>
+                        <li class="CiscoUmbrella">Cisco Umbrella</li>
+                        <li>OS firewalls</li>
+                        <li>Antivirus</li>
+                        <li>EDR</li>
+                        <li>DLP</li>
+                        <li>Monitoring & alerting</li>
+                    </ol>
+                    </div>
+                </li>
+                <li>Physical office security</li>
+            </ol>
+        </li>
+        <li>Digital Ecosystem
+            <ol type="a">
+                <li>Public assets
+                    <ol type="i">
+                        <li>cloud infrastructure</li>
+                        <li>web application</li>
+                        <li>mobile application</li>
+                    </ol>
+                    <p class="Bookmark2">Defense D3a:</p>
+                    <ol>
+                        <li class="D3a D3a1">Threat hunting (on the internet & within the cloud infrastructure)</li>
+                        <li class="D3a D3a2">Firewalls (WAF, Network, Host, etc.)</li>
+                        <li class="D3a D3a3">Authentication (including MFA), authorization</li>
+                        <li class="D3a D3a4">Security engineering</li>
+                        <li class="D3a D3a5">Regular internal & external VA/PT
+                            <ol type="a">
+                                <li>Applications are sandboxed</li>
+                                <li>Servers are hardened</li>
+                                <li>Network segregation is ensured</li>
+                                <li>Infra configurations are hardened</li>
+                            </ol>
+                        </li>
+                        <li class="D3a D3a6">Encryption at rest & in transit</li>
+                        <li class="D3a D3a7">Monitoring & alerting & incident response</li>
+                        <li class="D3a D3a8">Disaster recovery</li>
+                    </ol>
+                </li>
+                <li>Third party technologies & vendors
+                    <ol type="i">
+                        <li>product integrations</li>
+                        <li>other technology partners</li>
+                    </ol>
+                    <p>D3b. Defense deployed for the above:</p>
+                    <ol>
+                        <li>IP whitelisting</li>
+                        <li class="TPRABasics">Third party risk assessments</li>
+                        <li class="TPRABasics">Compliance certifications, like ISO, SOC2, etc.</li>
+                    </ol>
+                </li>
+                <li>Enterprise apps
+                    <ol type="i">
+                        <li>communication systems, like Slack</li>
+                        <li>Internal finance & HR systems</li>
+                        <li>engineering systems, like JIRA</li>
+                    </ol>
+                    <p>D3c. Defense deployed for the above:</p>
+                    <ol>
+                        <li class="EnterpriseBasics">Email protection (Mimecast, SPF, DKIM, DMARC)</li>
+                        <li>SSO - Unauthorized access not allowed</li>
+                        <li>All apps up to date & hardened</li>
+                        <li>Monitoring & alerting</li>
+                    </ol>
+                </li>
+            </ol>
+        </li>
+    </ol>
+    </div>
+
+    <div class="vertical-line"></div>
+
+    <div id="3" class="section">
+    <h1>Cyber Kill Chains/Attack paths & Defense In Depth </h1>
+    <ol>
+        <li>Goal attempted through phishing email
+            <ol type="a">
+                <li><a href=".EnterpriseBasics">D3c1</a> disallows phishing email
+                    <ol type="i">
+                        <li><a href=".SecurityAwareness">D1b</a> prevents from malware entry
+                            <ol>
+                                <li>Browser =>
+                                    <ul>
+                                        <li><a href=".JAMF">D2b1</a> prevents browser exploits & malicious extensions</li>
+                                        <li><a href=".CiscoUmbrella">D2b3</a> does not allow visiting a malicious website</li>
+                                    </ul>
+                                </li>
+                                <li>Device =>
+                                    <ul>
+                                        <li><a href=".Bookmark1">D2b</a> prevents malware execution & subsequent data exfiltration</li>
+                                        <li><a href=".D3a7">D3a7</a> prevents data from being exfiltrated</li>
+                                        <li><a href=".D3a4, .D3a5, .D3a6">D3a4-6</a> prevents credentials abuse</li>
+                                    </ul>
+                                </li>
+                                <li>Device to other potential devices =>
+                                    <ul>
+                                        <li><a href=".OfficeNWLateralMovement">D2a</a> prevents lateral movement</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+                <li>Goal attempted through any other enterprise app =>
+                    <ol type="i">
+                        <li><a href=".EnterpriseBasics">D3c</a> disallows the entry</li>
+                    </ol>
+                </li>
+            </ol>
+        </li>
+        <li>Goal attempted through third party compromise or third-party abuse
+            <ol type="a">
+                <li><a href=".TPRABasics">D3b2 & D3b3</a> limits third party intentional abuse</li>
+                <li><a href=".D3a1, .D3a2, .D3a3, .D3a4, .D3a5, .D3a6, .D3a7">D3a1 to D3a7</a> limits third party abuse through third party compromise</li>
+            </ol>
+        </li>
+        <li>Goal attempted through public assets
+            <ol type="a">
+                <li>Some software security issue (vulnerability) =>
+                    <ul>
+                        <li><a href=".D3a1">D3a1</a> ensures active threats are immediately handled</li>
+                    </ul>
+                    <ol type="i">
+                        <li><a href=".D3a2, .D3a3, .D3a4, .D3a5, .D3a6, .D3a7">D3a2 to D3a7</a> ensure any residual threat is successively handled</li>
+                    </ol>
+                </li>
+                <li>Some credentials found leaked on the open web or dark web =>
+                    <ul>
+                        <li><a href=".D3a3">D3a3</a> ensures credentials alone are not sufficient to gain access</li>
+                        <li><a href=".D3a1, .D3a7">D3a1 & D3a7</a> ensure threats are immediately handled</li>
+                    </ul>
+                    <ol type="i">
+                        <li>Malware lands on infra server =>
+                            <ul>
+                                <li><a href=".D3a5">D3a5</a> ensures malware will not execute & if at all it is contained within the sandbox & cannot spread on the network or outside</li>
+                            </ul>
+                            <ol>
+                                <li>Malware touches database & tries exfiltrating data or encrypting it
+                                    <ul>
+                                        <li><a href=".D3a1">D3a1</a> ensures threat is detected</li>
+                                        <li><a href=".D3a7">D3a7</a> ensures threat is handled</li>
+                                    </ul>
+                                    <ol type="a">
+                                        <li>Malware goes unnoticed & manages to encrypt DB =>
+                                            <ul>
+                                                <li><a href=".D3a8">D3a8</a> ensures data can be quickly recovered from regularly taken backups</li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </li>
+    </ol></div></div>
+<script>
+document.addEventListener('click', function(e) {
+    if(e.target.tagName === 'A') {
+        e.preventDefault();
+        const href = e.target.getAttribute('href');
+        
+        // Remove highlight from all elements
+        document.querySelectorAll('.highlight').forEach(el => el.classList.remove('highlight'));
+
+        // Highlight elements based on the class
+        const elements = document.querySelectorAll(href);
+        elements.forEach(el => el.classList.add('highlight'));
+
+        // Scroll to the first highlighted element
+        if(elements.length > 0) {
+            elements[0].scrollIntoView({behavior: 'smooth'});
+        }
+
+        // Add 'clicked-link' class to the clicked link
+        e.target.classList.add('clicked-link');
+    }
+});
+</script>
+</body>
+</html> 
