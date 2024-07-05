@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XSS vs Heterogeneous Ecosystem Comparison</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .category {
+            background-color: #ecf0f1;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        @media screen and (max-width: 600px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+            tr {
+                margin-bottom: 15px;
+            }
+            td {
+                border: none;
+                position: relative;
+                padding-left: 50%;
+            }
+            td:before {
+                position: absolute;
+                top: 6px;
+                left: 6px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                content: attr(data-label);
+                font-weight: bold;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>XSS - Unified SaaS Platform VS Heterogeneous Ecosystem</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspect</th>
+                <th>Heterogeneous Ecosystem</th>
+                <th>XSS - Unified SaaS Platform</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="category">
+                <td colspan="3">Security Outlook</td>
+            </tr>
+            <tr>
+                <td data-label="Aspect">Policies & Controls</td>
+                <td data-label="Heterogeneous Ecosystem">Inconsistent, multiple systems</td>
+                <td data-label="XSS - Unified SaaS Platform">Unified, centralized</td>
+            </tr>
+            <tr>
+                <td data-label="Aspect">Compliance & Vulnerabilities</td>
+                <td data-label="Heterogeneous Ecosystem">Varied, multiple sources</td>
+                <td data-label="XSS - Unified SaaS Platform">Centralized, easier to manage</td>
+            </tr>
+            <tr>
+                <td data-label="Aspect">Data Protection & Incident Response</td>
+                <td data-label="Heterogeneous Ecosystem">Fragmented, vendor-dependent</td>
+                <td data-label="XSS - Unified SaaS Platform">Uniform, streamlined</td>
+            </tr>
+            <tr>
+                <td data-label="Aspect">Monitoring & Threat Detection</td>
+                <td data-label="Heterogeneous Ecosystem">Inconsistent, needs integration</td>
+                <td data-label="XSS - Unified SaaS Platform">Centralized, integrated</td>
+            </tr>
+            <tr class="category">
+                <td colspan="3">General Outlook</td>
+            </tr>
+            <tr>
+                <td data-label="Aspect">Integration & Maintenance</td>
+                <td data-label="Heterogeneous Ecosystem">Complex, high maintenance</td>
+                <td data-label="XSS - Unified SaaS Platform">Seamless, simplified</td>
+            </tr>
+            <tr>
+                <td data-label="Aspect">User Experience & Cost</td>
+                <td data-label="Heterogeneous Ecosystem">Inconsistent, potentially higher</td>
+                <td data-label="XSS - Unified SaaS Platform">Consistent, cost-effective</td>
+            </tr>
+            <tr>
+                <td data-label="Aspect">Scalability & Support</td>
+                <td data-label="Heterogeneous Ecosystem">Challenging, fragmented</td>
+                <td data-label="XSS - Unified SaaS Platform">Easy, single point of contact</td>
+            </tr>
+            <tr>
+                <td data-label="Aspect">Customization & Data Management</td>
+                <td data-label="Heterogeneous Ecosystem">High customization, data silos</td>
+                <td data-label="XSS - Unified SaaS Platform">Limited customization, centralized data</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
